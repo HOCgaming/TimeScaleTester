@@ -6,8 +6,8 @@ using UnityStandardAssets.ImageEffects;
 public class SpheresController : MonoBehaviour {
 
     public GameObject[] spheres;
-    public Camera firstPersonCamera;
-    public VignetteAndChromaticAberration vignette;
+    //public Camera firstPersonCamera;
+    //public VignetteAndChromaticAberration vignette;
     public List<GameObject> bullets = new List<GameObject>();
     public Vector3 aimTowards = new Vector3(0, 1.8f, 0);
     public float slowTime = 0.1f, timeLimit = 0;
@@ -45,7 +45,7 @@ public class SpheresController : MonoBehaviour {
             Time.timeScale = 1;
         }
 
-        if (Input.GetKey(KeyCode.E) && !gameOver)
+     /*   if (Input.GetKey(KeyCode.E) && !gameOver)
         {
             timeLimit += 0.5f * Time.deltaTime;
             vignette.intensity = Mathf.Lerp(0, 1, timeLimit);
@@ -56,7 +56,7 @@ public class SpheresController : MonoBehaviour {
             timeLimit -= Time.deltaTime;
             vignette.intensity = Mathf.Lerp(0, 1, timeLimit);
             firstPersonCamera.fieldOfView = Mathf.Lerp(80, FOV_TARGET, timeLimit);
-        }
+        } */
 	
 	}
 }
