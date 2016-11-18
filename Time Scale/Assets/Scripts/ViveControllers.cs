@@ -17,13 +17,15 @@ public class ViveControllers : MonoBehaviour {
 	
 	void Update () {
 
-        triggerDown = controller.GetPress(trigger);
+        triggerDown = controller.GetPressDown(trigger);
+        triggerUp = controller.GetPressUp(trigger);
 
         if (triggerDown)
         {
             Time.timeScale = 0.1f;
+            Debug.LogWarning("TIME IS SLOOWWWWWWWWW");
         }
-        if (triggerDown)
+        if (triggerUp)
         {
             Time.timeScale = 1;
         }
